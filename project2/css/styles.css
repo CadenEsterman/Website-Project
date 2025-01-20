@@ -1,0 +1,423 @@
+/* Caden Esterman Project Version 2 CSS File*/
+
+/* Starting with mobile layout */
+:root{
+   --theme-color: cyan;
+   --theme-dark-color: #0b2233;
+   --primary-font-color: white;
+   --link-font-color: white;
+}
+
+/* grid layout */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary-font-color);
+    background-color: var(--theme-dark-color);
+    display: grid;
+    justify-content: center;
+    grid-gap: 5px 50px;
+    grid-template-columns: 90%;
+    grid-template-areas: "header" "main" "aside" "footer";
+    font-size: 18px;
+}
+
+header{
+    grid-area: header;    
+}
+
+main{
+    grid-area: main;
+}
+
+aside{
+    grid-area: aside;
+    border-bottom: solid 1px gray;  
+}
+
+aside ul{
+    display:flex;
+    gap: 30px;
+    justify-content:space-evenly;
+}
+
+aside a:link{
+    color: var(--link-font-color);
+    border: none;
+    box-shadow: none;
+}
+
+aside a:hover{
+    color: var(--theme-color);
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    padding-top: 15px;
+    margin: 0 auto;
+}
+
+header > img{
+    width: 100%;
+    max-width: 1000px;
+    height:auto;
+    box-shadow: 0 0 7px var(--theme-color);
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--primary-font-color);
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0 0 7px var(--theme-color);
+    border: ridge 6px black;
+    padding:5px;
+}
+
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 10px;
+    color: var(--primary-font-color);
+    text-shadow: 0 0 4px var(--theme-color);
+    font-size: 1.6rem;
+}
+
+h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--primary-font-color);
+    text-shadow: 0 0 4px var(--theme-color);
+    font-size: 1.3rem;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* form styling*/
+form p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-weight:bold;
+    text-decoration: underline;
+    padding-top: 25px;
+}
+
+label{
+    float:left;
+    clear:left;
+    display:block;
+    width:100px; 
+}
+
+input, textarea {
+    display:block;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    padding: 5px;
+}
+
+input[type="submit"], input[type="reset"]{
+    margin: 5px;
+    margin-left: 110px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(2, 150, 164);
+    border: none;
+    border-radius: 4px;
+    width: 100px;
+    padding: 5px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover{
+    background-color: #07d;
+}
+
+/* Navigation bar */
+.nav{
+    display: flex;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 1rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 15px;
+}
+
+.nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:link{
+    color: var(--link-font-color);
+    border: groove rgba(0, 0, 0, 0);
+    box-shadow: 0 0 3px rgba(0, 255, 255, 0);
+}
+
+a:visited{
+    color:var(--link-font-color);
+}
+a:hover{
+    color: var(--theme-color);
+    border: groove rgba(0, 0, 0, 1);
+    box-shadow: 0 0 3px rgba(0, 255, 255, 1)
+}
+
+a:active{
+    color: var(--theme-color);
+}
+/* Content */
+#introduction{
+    text-align: center;
+}
+
+.timeline-images{
+    padding-top: 10px;
+    display: flex;
+    align-content: center;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#empire{
+    width: 30%;
+    max-width: 1000px;
+    height: 50%;
+    box-shadow: 0 0 6px var(--theme-color);
+}
+
+#jurassic{
+    width: 30%;
+    max-width: 1000px;
+    height: 50%;
+    box-shadow: 0 0 6px var(--theme-color);
+}
+
+#dead-man{
+    width: 30%;
+    max-width: 1000px;
+    height: 50%;
+    box-shadow: 0 0 6px var(--theme-color);
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: -20px;
+    padding-inline-start: 12px;
+}
+
+
+hr{
+    width: 100%;
+    border-color: gray;
+}
+
+.text-left-cont{
+    display: flex;
+    gap: 20px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    padding-inline-start: 12px;
+    flex-wrap: wrap;
+}
+
+#dykstra-one-img{
+    width:40%;
+    max-width: 1000px;
+    height:auto;
+    box-shadow: 0 0 6px var(--theme-color); 
+}
+
+.text-right-cont{
+    display: flex;
+    gap: 20px;
+    padding-inline-start: 12px;
+    flex-wrap: wrap-reverse;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    padding-inline-start: 12px;
+    padding-top: 20px;
+}
+
+#dykstra-two-img{
+    width:40%;
+    max-width: 1000px;
+    height:auto;
+    box-shadow: 0 0 6px var(--theme-color);
+}
+
+#wireframe{
+    width:40%;
+    max-width: 1000px;
+    height:auto;
+    box-shadow: 0 0 6px var(--theme-color);
+}
+
+#yoda{
+    width:40%;
+    max-width: 1000px;
+    height:auto;
+    box-shadow: 0 0 6px var(--theme-color);
+}
+
+#jar-jar-img{
+    width: 40%;
+    max-width: 1000px;
+    height:auto;
+    box-shadow: 0 0 6px var(--theme-color)
+}
+
+#digital-camera-img{
+    width: 40%;
+    max-width: 1000px;
+    height:auto;
+    box-shadow: 0 0 6px var(--theme-color)
+}
+
+#film-img{
+    width: 40%;
+    max-width: 1000px;
+    height:auto;
+    box-shadow: 0 0 6px var(--theme-color);
+}
+
+#fred{
+    width:40%;
+    max-width: 1000px;
+    height:auto;
+    box-shadow: 0 0 6px var(--theme-color);
+}
+
+#volume-two{
+    width:40%;
+    max-width: 1000px;
+    height:auto;
+    box-shadow: 0 0 6px var(--theme-color);
+}
+
+#volume-three{
+    width:40%;
+    max-width: 1000px;
+    height:auto;
+    box-shadow: 0 0 6px var(--theme-color);
+}
+
+main #wesbites{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+main #images{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main section ul{
+    line-height: 150%;
+}
+
+li{
+    overflow-wrap: break-word;
+}
+
+/* This is the tablet breakpoint, where whitespace is increased significantly*/
+@media only screen and (min-width: 600px){
+    body{
+        margin: 2em;
+    }
+
+    h2{
+        margin-top: 15px;
+    }
+
+    .text-right-cont{
+        margin-bottom: 35px;
+        line-height: 150%;
+    }
+
+    .text-left-cont{
+        margin-bottom: 35px;
+        line-height: 150%;
+    }
+
+    .info{
+        margin-bottom: 35px;
+        line-height: 150%;
+    }
+
+    .intro{
+        margin-bottom: 15px;
+        line-height: 150%;
+    }
+
+    aside{
+        padding-bottom: 15px;
+    }
+
+    .nav{
+        font-size: 1.1rem;
+    }
+
+}
+/*Desktop breakpoint, where whitespace is increased and flex items appear in rows instead of coloumns. attempted to make aside wrap to the left but it was not working properly*/
+@media only screen and (min-width: 800px){
+    body{
+        margin: 2.5em;
+    }
+
+    h2{
+        margin-top: 20px;
+    }
+
+    .text-right-cont{
+        margin-bottom: 40px;
+        line-height: 175%;
+        flex-wrap: nowrap;
+        padding-left: 20px;
+    }
+
+    .text-left-cont{
+        margin-bottom: 40px;
+        line-height: 175%;
+        flex-wrap: nowrap;
+        padding-left: 20px;
+    }
+
+    .info{
+        margin-bottom: 40px;
+        line-height: 175%;
+    }
+
+    .intro{
+        margin-bottom: 20px;
+        line-height: 175%;
+        font-size: 1.1rem;
+        padding-left: 20px;
+    }
+
+    main{
+        width:70%;
+        margin: 0 auto;
+    }
+
+    aside{
+        width:70%;
+        margin: 0 auto;
+    }
+
+    .nav{
+        font-size: 1.3rem;
+    }
+
+
+}
+
